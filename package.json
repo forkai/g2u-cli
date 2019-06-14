@@ -1,0 +1,19 @@
+{
+  "name": "g2u",
+  "version": "0.0.1",
+  "description": "把gbk编码文件转成utf-8编码",
+  "main": "index.js",
+  "bin": {
+    "g2u": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "forkai",
+  "license": "GLWT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "iconv-lite": "^0.4.21",
+    "yargs": "^13.2.4"
+  }
+}
