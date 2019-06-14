@@ -7,10 +7,24 @@
 
 ## 使用方法
 
-1. `git clone git@github.com:forkai/gbk2utf.git`
-2. 使用`npm i -g`安装。
-3. 执行`g2u 文件名或者文件夹`
+全局安装：
+```bash
+# 安装
+$npm i -g g2u-cli
+# 编译文本文件
+$g2u 'fileName.txt'
+# 编译目录
+$g2u './dirName'
+```
 
+局部安装：
+```javascript
+const g2u = require('g2u-cli')
+// 编译文本文件
+g2u('fileName.txt')
+// 编译目录
+g2u('./dirName')
+```
 
 ## 问题🔔
 

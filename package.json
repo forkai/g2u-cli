@@ -1,24 +1,28 @@
 {
-  "name": "g2u-cli",
-  "version": "0.0.1",
-  "description": "把gbk编码文件转成utf-8编码",
-  "main": "index.js",
-  "bin": {
-    "g2u": "./bin/index.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "abcuce@outlook.com",
-  "license": "GLWT",
-  "homepage": "https://github.com/forkai/g2u-cli",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/forkai/g2u-cli.git"
-  },
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "iconv-lite": "^0.4.21",
-    "yargs": "^13.2.4"
-  }
+	"name": "g2u-cli",
+	"version": "0.0.2",
+	"description": "把gbk编码文件转成utf-8编码",
+	"main": "index.js",
+	"bin": {
+		"g2u": "./bin/index.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"gbk",
+		"utf-8"
+	],
+	"author": "abcuce@outlook.com",
+	"license": "GLWT",
+	"homepage": "https://github.com/forkai/g2u-cli",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/forkai/g2u-cli.git"
+	},
+	"dependencies": {
+		"chalk": "^2.4.2",
+		"iconv-lite": "^0.4.21",
+		"yargs": "^13.2.4"
+	}
 }
