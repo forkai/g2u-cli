@@ -1,17 +1,20 @@
 #!/usr/bin/env node
 const chalk = require('chalk')
-const { argv } = require('yargs')
+const { argv } = require('yargs').alias('n', 'name')
 const run = require('../index')
 
 const outputHelpInfo = () => {
-	console.log('用法: g2u <命令> [选项]')
-	console.log(chalk.blue('选项'))
-	console.log('--version 输出版本信息')
-	console.log('--help 输出帮助信息')
-	console.log(chalk.blue('命令:'))
-	console.log('g2u gbk.txt')
-	console.warn(chalk.red('注意：'))
-	console.warn('只能对gbk编码文件进行使用，其他编码文件会造成乱码!')
+	console.log(`
+用法: g2u <命令> [选项]
+
+${chalk.blue('选项：')}
+	-v, --version  输出版本信息
+	-h, --help     输出帮助信息
+${chalk.blue('命令：')}
+	g2u 'fileName.txt' 转换单个文件
+	g2u '/dirName' 转换文件夹下所有文本文件
+${chalk.red('注意：')}
+	只能对gbk编码文件进行使用，其他编码文件会造成乱码!`)
 }
 
 // 没有输入命令
@@ -22,11 +25,8 @@ const noArgv = () => {
 	return false
 }
 
-if (noArgv()) {
-	outputHelpInfo()
-}
+// 没有输入参数显示帮助信息
+noArgv() && outputHelpInfo()
 
 // 输入了txt文件路径
-if (argv._.length > 0) {
-	run(argv._[0])
-}
+argv._.length > 0 && run(argv._[0])
