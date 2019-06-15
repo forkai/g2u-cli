@@ -1,18 +1,20 @@
 #!/usr/bin/env node
-const chalk = require('chalk')
-const { argv } = require('yargs').alias('n', 'name')
-const g2u = require('../index')
+const { argv } = require('yargs')
+		.alias('v', 'version')
+		.alias('h', 'help'),
+	g2u = require('../index'),
+	{ blue, red } = require('chalk')
 
 const outputHelpInfo = () => {
-	console.log(`${chalk.blue('用法:')}
+	console.log(`${blue('用法:')}
 	g2u <命令> [选项]
-${chalk.blue('选项：')}
+${blue('选项：')}
 	-v, --version  输出版本信息
 	-h, --help     输出帮助信息
-${chalk.blue('命令：')}
-	g2u 'fileName.txt' 转换单个文件
-	g2u './dirName' 转换文件夹下所有文本文件
-${chalk.red('注意：')}
+${blue('命令：')}
+	g2u fileName.txt 转换单个文件
+	g2u ./dirName 转换文件夹下所有文本文件
+${red('注意：')}
 	只能对gbk编码文件进行使用，其他编码文件会造成乱码!`)
 }
 

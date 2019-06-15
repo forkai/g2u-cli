@@ -4,20 +4,28 @@
 
 批量把`gbk`编码的`.txt`文件转码成`.utf-8`编码的文件。
 
-
 ## 使用方法
 
-全局安装：
+### 全局安装
+
+当作CLI工具使用：
 ```bash
 # 安装
 $npm i -g g2u-cli
 # 编译文本文件
-$g2u 'fileName.txt'
+$g2u fileName.txt
 # 编译目录
-$g2u './dirName'
+$g2u ./dirName
 ```
 
-局部安装：
+### 局部安装
+
+在你的项目中安装：
+```bash
+npm i g2u-cli
+```
+
+当作JS库使用:
 ```javascript
 const g2u = require('g2u-cli')
 // 编译文本文件

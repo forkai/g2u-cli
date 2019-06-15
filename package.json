@@ -1,6 +1,6 @@
 {
 	"name": "g2u-cli",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "把gbk编码文件转成utf-8编码",
 	"main": "index.js",
 	"bin": {
@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"chalk": "^2.4.2",
+		"fs-extra": "^8.0.1",
 		"iconv-lite": "^0.4.21",
 		"yargs": "^13.2.4"
 	}
