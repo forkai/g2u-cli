@@ -2,7 +2,7 @@
 const { argv } = require('yargs')
 		.alias('v', 'version')
 		.alias('h', 'help'),
-	g2u = require('../index'),
+	g2u = require('../src/index'),
 	{ blue, red } = require('chalk')
 
 const outputHelpInfo = () => {

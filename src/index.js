@@ -10,7 +10,7 @@ const { decode } = require('iconv-lite'),
 		readFile,
 		existsSync,
 		writeFile,
-		mkdirSync
+		mkdirSync,
 	} = require('fs-extra')
 
 // 将文本文件从gbk编码转换成utf-8编码
@@ -33,7 +33,7 @@ const transformFile = async (filePath, fileName) => {
 }
 
 // 判断文件拓展名是否是txt
-const judgeType = (fileName, dirName) => {
+const judgeFileType = (fileName, dirName) => {
 	if (extname(fileName) != '.txt') {
 		log('请使用txt格式文件🤷🏻‍')
 	} else {
@@ -49,11 +49,11 @@ const g2u = async filePath => {
 	filePath = basename(filePath)
 	try {
 		if (extname(filePath)) {
-			judgeType(filePath)
+			judgeFileType(filePath)
 		} else {
 			const files = await readdir(filePath)
 			files.forEach(el => {
-				extname(el) && judgeType(el, filePath)
+				extname(el) && judgeFileType(el, filePath)
 			})
 		}
 	} catch (err) {
